@@ -1,0 +1,48 @@
+{
+  "name": "sierra-handlebars",
+  "version": "0.0.0",
+  "description": "Handlebars integration for Sierra",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjohnsonaz/sierra-handlebars.git"
+  },
+  "license": "MIT",
+  "author": "Sean Johnson <sjohnson@sjohnsonaz.com>",
+  "main": "dist/scripts/SierraHandlebars.js",
+  "typings": "dist/scripts/SierraHandlebars.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "rimraf ./dist && tsc --declaration",
+    "test": "tsc && node src/mocha/NodeRunner.js",
+    "watch": "tsc --watch",
+    "watch-link": "tsc --declaration --watch",
+    "mkdocs": "mkdocs build",
+    "mkdocs-serve": "mkdocs serve",
+    "mkdocs-deploy": "mkdocs gh-deploy"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "handlebars": "^4.0.12",
+    "sierra": "^0.3.13"
+  },
+  "devDependencies": {
+    "@types/chai": "4.1.6",
+    "@types/handlebars": "4.0.39",
+    "@types/mocha": "5.2.5",
+    "@types/node": "10.11.4",
+    "chai": "4.2.0",
+    "handlebars": "^4.0.12",
+    "mocha": "5.2.0",
+    "nodemon": "1.18.4",
+    "rimraf": "2.6.2",
+    "sierra": "^0.3.13",
+    "typescript": "3.1.1"
+  },
+  "keywords": [
+    "sierra",
+    "handlebars",
+    "mvc",
+    "view"
+  ]
+}
