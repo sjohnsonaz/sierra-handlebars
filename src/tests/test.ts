@@ -21,7 +21,9 @@ describe('route decorator`', () => {
 
         application = new Sierra();
         application.addController(new TestController());
-        SierraHandlebars.viewRoot = './views/';
+        SierraHandlebars.init({
+            viewRoot: './views/'
+        });
         application.view(SierraHandlebars.handle);
         application.init();
         await application.listen(port);
