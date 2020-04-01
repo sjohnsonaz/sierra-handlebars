@@ -26,8 +26,8 @@ export default class HandlebarsView {
         }
     }
 
-    static async handle(context: Context, data: any, template: string) {
-        let templateFile = path.join(HandlebarsView.viewRoot, template) + '.handlebars';
+    static async handle(context: Context, data: any, template?: string) {
+        let templateFile = path.join(HandlebarsView.viewRoot, template || '') + '.handlebars';
         var templateText = await new Promise((resolve, reject) => {
             fs.readFile(templateFile, {
                 encoding: 'utf8'
