@@ -4,8 +4,8 @@ chai.use(chaiHttp);
 let expect = chai.expect;
 
 import Sierra, { Controller, middleware, route, Context, view } from 'sierra';
-import { wait } from '../scripts/utils/TestUtil';
-import SierraHandlebars from '../scripts/SierraHandlebars';
+import { wait } from './utils/TestUtil';
+import SierraHandlebars from './SierraHandlebars';
 
 describe('HandlebarsView', function () {
     SierraHandlebars.init({
