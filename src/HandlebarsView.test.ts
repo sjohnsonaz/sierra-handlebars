@@ -20,16 +20,11 @@ describe('HandlebarsView', function () {
         return null;
     });
 
-    it('should load template files', async function () {
-        let template = await SierraHandlebars.getTemplate('test/simple');
-        expect(template).to.not.be.undefined;
-    });
-
     it('should render templates', function () {
-        let templateText = "1, {{data}}, 3";
+        let templateText = "1, {{value}}, 3";
         let template = SierraHandlebars.createTemplate(templateText);
 
-        let result = template({ data: 2 });
+        let result = template({ value: 2 });
 
         expect(result).to.equal('1, 2, 3');
     });
@@ -49,6 +44,11 @@ describe('HandlebarsView', function () {
         let fullResult = layout(Object.assign({ body }, context));
 
         expect(fullResult).to.equal('123');
+    });
+
+    it('should load template files', async function () {
+        let template = await SierraHandlebars.getTemplate('test/simple');
+        expect(template).to.not.be.undefined;
     });
 });
 
