@@ -1,3 +1,3 @@
 # Sierra Handlebars
 
-[![Build Status](https://travis-ci.org/sjohnsonaz/sierra-handlebars.svg?branch=master)](https://travis-ci.org/sjohnsonaz/sierra-handlebars) [![npm version](https://badge.fury.io/js/sierra-handlebars.svg)](https://badge.fury.io/js/sierra-handlebars)
+![Node.js CI](https://github.com/sjohnsonaz/sierra-handlebars/workflows/Node.js%20CI/badge.svg) [![npm version](https://badge.fury.io/js/sierra-handlebars.svg)](https://badge.fury.io/js/sierra-handlebars)
