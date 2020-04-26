@@ -3,8 +3,8 @@ import chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 let expect = chai.expect;
 
-import Template from './Template'; import Renderer from './Renderer';
-;
+//import Template from './Template';
+import Renderer from './Renderer';
 
 describe('HandlebarsView', function () {
     Renderer.registerHelper('section', function (this: any, name, options) {
