@@ -15,7 +15,7 @@
     "build": "tsc",
     "clean": "rimraf ./dist",
     "prepublishOnly": "rimraf ./dist && tsc --declaration",
-    "test": "tsc && mocha ./dist/**/*.test.js",
+    "test": "jest --coverage --verbose",
     "watch": "tsc --watch --declaration",
     "docs": "docsify serve docs"
   },
@@ -23,27 +23,32 @@
     "handlebars": "4.7.6"
   },
   "peerDependencies": {
-    "sierra": "^0.5.0"
+    "sierra": "^0.5.7"
   },
   "devDependencies": {
-    "@types/chai": "4.2.11",
-    "@types/chai-http": "4.2.0",
     "@types/handlebars": "4.1.0",
-    "@types/mocha": "7.0.2",
-    "@types/node": "13.13.2",
-    "chai": "4.2.0",
-    "chai-http": "4.3.0",
-    "docsify-cli": "^4.4.0",
-    "mocha": "7.1.1",
+    "@types/jest": "26.0.14",
+    "@types/node": "14.11.2",
+    "@types/supertest": "^2.0.10",
+    "docsify-cli": "4.4.1",
+    "jest": "26.4.2",
     "rimraf": "3.0.2",
-    "sierra": "^0.5.0",
-    "tsc-watch": "4.2.3",
-    "typescript": "3.8.3"
+    "sierra": "^0.5.7",
+    "supertest": "5.0.0",
+    "ts-jest": "26.4.1",
+    "tsc-watch": "4.2.9",
+    "typescript": "4.0.3"
   },
   "keywords": [
     "sierra",
     "handlebars",
     "mvc",
     "view"
-  ]
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ]
+  }
 }

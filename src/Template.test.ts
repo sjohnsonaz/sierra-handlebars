@@ -1,6 +1,4 @@
-import { expect } from 'chai';
-
-import Handlebars from 'handlebars';
+import { registerHelper, HelperOptions } from 'handlebars';
 
 import Template from './Template';;
 
@@ -11,16 +9,16 @@ describe('Template', function () {
 
         let result = template.render({ value: 2 });
 
-        expect(result.body).to.equal('1, 2, 3');
+        expect(result.body).toBe('1, 2, 3');
     });
 
     it('should load template files', async function () {
         let template = new Template();
         await template.load('./views/test/simple.handlebars');
-        expect(template.delegate).to.not.be.undefined;
+        expect(template.delegate).toBeDefined();
     });
 
-    Handlebars.registerHelper('section', function (this: any, name, options) {
+    registerHelper('section', function (this: any, name: string, options: HelperOptions) {
         if (!this._sections) {
             this._sections = {};
         }
@@ -47,6 +45,6 @@ describe('Template', function () {
                 context
             ));
 
-        expect(fullResult.body).to.equal('123');
+        expect(fullResult.body).toBe('123');
     });
 });

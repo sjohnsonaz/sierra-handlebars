@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-import Handlebars from 'handlebars';
+import * as Handlebars from 'handlebars';
 
 import { Context } from 'sierra';
 import Template from './Template';

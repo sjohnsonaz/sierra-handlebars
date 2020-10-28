@@ -1,4 +1,4 @@
-import Handlebars from 'handlebars';
+import * as Handlebars from 'handlebars';
 
 import { Context } from 'sierra';
 import { IConfig } from './Template';

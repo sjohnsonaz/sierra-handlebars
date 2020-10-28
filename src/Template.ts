@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-import Handlebars from 'handlebars';
+import * as Handlebars from 'handlebars';
 
 interface IHelpersHash {
     [index: string]: Handlebars.HelperDelegate;
